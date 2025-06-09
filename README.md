@@ -41,12 +41,12 @@ O frontend espera que o backend esteja rodando em `http://localhost:4000/api/inv
    npm install
    ```
 
-3.Instale as dependências:
+3. **Instale as dependências:**
   ```bash
   npm run dev
   ```
 
-4.Abra a aplicação em seu navegador:
+4. **Abra a aplicação em seu navegador:**
   ```bash
   http://localhost:3000
   ```
