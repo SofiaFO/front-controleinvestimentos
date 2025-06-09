@@ -1,45 +1,52 @@
-# Controle de Investimento - Frontend  
+# Controle de Investimento - Frontend
 
-Este projeto é um front-end de uma aplicação para gerenciar investimentos, com funcionalidades de cadastro, listagem, edição e exclusão de ativos financeiros.  
+Este projeto é o frontend de uma aplicação para gerenciar investimentos, permitindo cadastro, listagem, edição e exclusão de ativos financeiros. Ele está integrado a um backend RESTful.
 
-## Funcionalidades  
-- **Cadastrar investimento**: Adicione informações sobre seus investimentos (nome, tipo, valor e data).  
-- **Listar investimentos**: Veja uma tabela com todos os investimentos cadastrados.  
-- **Editar investimento**: Modifique os detalhes de um investimento existente.  
-- **Excluir investimento**: Remova investimentos da lista.  
-- **Validações de formulário**:  
-  - Todos os campos devem ser preenchidos.  
-  - O valor investido não pode ser negativo ou zero.  
-  - A data do investimento não pode ser futura.  
+## Funcionalidades
+- **Cadastrar investimento**: Adicione informações sobre seus investimentos (nome, tipo, valor e data).
+- **Listar investimentos**: Veja uma tabela com todos os investimentos cadastrados.
+- **Editar investimento**: Modifique os detalhes de um investimento existente.
+- **Excluir investimento**: Remova investimentos da lista.
+- **Validações de formulário**:
+  - Todos os campos devem ser preenchidos.
+  - O valor investido não pode ser negativo ou zero.
+  - A data do investimento não pode ser futura.
 
-## Tecnologias Utilizadas  
-- **React**: Biblioteca JavaScript para criação de interfaces de usuário.  
-- **TypeScript**: Tipagem estática para maior segurança e produtividade no código.  
+## Tecnologias Utilizadas
+- **React**: Biblioteca JavaScript para criação de interfaces de usuário.
+- **TypeScript**: Tipagem estática para maior segurança e produtividade no código.
 - **Tailwind CSS**: Framework de CSS para estilização rápida e eficiente.
-- 
-## Como Rodar o Projeto Localmente  
+- **Axios**: Cliente HTTP para integração com o backend.
 
-### Pré-requisitos  
-Certifique-se de que você tenha o **Node.js** e o **npm** (ou yarn) instalados em sua máquina.  
+## Integração com o Backend
+O frontend espera que o backend esteja rodando em `http://localhost:4000/api/investments` (ajuste a URL em `src/services/api.ts` se necessário). As respostas do backend devem seguir o padrão:
+- Listagem: `{ "investments": [ ... ] }`
+- Cadastro/Edição: `{ "data": { ... } }`
 
-### Passo a passo  
-1. Clone o repositório:  
-   ```bash  
-   git clone <URL_DO_REPOSITÓRIO>  
-   cd front-controleinvestimentos 
-   ```  
+## Como Rodar o Projeto Localmente
 
-2. Instale as dependências:  
-   ```bash  
-   npm install  
-   ```  
+### Pré-requisitos
+- **Node.js** e **npm** (ou yarn) instalados em sua máquina.
+- Backend da aplicação rodando (consulte a documentação do backend).
 
-3. Inicie o servidor de desenvolvimento:  
-   ```bash  
-   npm run dev  
-   ```  
-
-4. Abra a aplicação em seu navegador:  
+### Passo a passo
+1. **Clone o repositório:**
+   ```bash
+   git clone <URL_DO_REPOSITORIO>
+   cd frontend
    ```
-   http://localhost:3000  
-   ```  
+
+2. **Instale as dependências:**
+   ```bash
+   npm install
+   ```
+
+3.Instale as dependências:
+  ```bash
+  npm run dev
+  ```
+
+4.Abra a aplicação em seu navegador:
+  ```bash
+  http://localhost:3000
+  ```
