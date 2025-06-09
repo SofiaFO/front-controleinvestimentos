@@ -14,7 +14,7 @@ export default function InvestmentRow({ investment, onEdit }: Props) {
       <td className="p-4 text-gray-700">{investment.name}</td>
       <td className="p-4 text-gray-700">{investment.type}</td>
       <td className="p-4 text-gray-700">R$ {investment.amount.toFixed(2)}</td>
-      <td className="p-4 text-gray-700">{investment.date}</td>
+      <td className="p-4">{new Date(investment.date).toLocaleDateString('pt-BR')}</td>
       <td className="p-4 flex gap-2">
         <button
           className="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition duration-300"
